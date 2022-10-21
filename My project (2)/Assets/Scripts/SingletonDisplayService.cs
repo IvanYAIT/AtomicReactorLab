@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SingletonDisplayService
 {
-    private Resource—oncentratorBD resource—oncentratorBD = (Resource—oncentratorBD)Resources.Load("SOs/Resource—oncentratorBD");
+    private ResourceConcentratorBD resourceConcentratorBD;
     private static SingletonDisplayService instance;
     public static SingletonDisplayService Instance
     {
@@ -21,18 +21,19 @@ public class SingletonDisplayService
 
     public Sprite GetEnrichmentSprite(ResourceTypes resourceType)
     {
+        resourceConcentratorBD = (ResourceConcentratorBD)Resources.Load("SOs/ResourceConcentratorBD");
         switch (resourceType)
         {
             case ResourceTypes.URANIUM:
-                return resource—oncentratorBD.Resource—oncentrators[0].EnrichmentSprite;
+                return resourceConcentratorBD.ResourceConcentrators[0].EnrichmentSprite;
             case ResourceTypes.PLUTONIUM:
-                return resource—oncentratorBD.Resource—oncentrators[1].EnrichmentSprite;
+                return resourceConcentratorBD.ResourceConcentrators[1].EnrichmentSprite;
             case ResourceTypes.GERMANIUM:
-                return resource—oncentratorBD.Resource—oncentrators[2].EnrichmentSprite;
+                return resourceConcentratorBD.ResourceConcentrators[2].EnrichmentSprite;
             case ResourceTypes.VANADIUM:
-                return resource—oncentratorBD.Resource—oncentrators[3].EnrichmentSprite;
+                return resourceConcentratorBD.ResourceConcentrators[3].EnrichmentSprite;
             case ResourceTypes.KRYPTON:
-                return resource—oncentratorBD.Resource—oncentrators[4].EnrichmentSprite;
+                return resourceConcentratorBD.ResourceConcentrators[4].EnrichmentSprite;
             default:
                 return null;
         }
@@ -43,15 +44,15 @@ public class SingletonDisplayService
         switch (resourceType)
         {
             case ResourceTypes.URANIUM:
-                return resource—oncentratorBD.Resource—oncentrators[0].ReadyToBreakSprite;
+                return resourceConcentratorBD.ResourceConcentrators[0].ReadyToBreakSprite;
             case ResourceTypes.PLUTONIUM:
-                return resource—oncentratorBD.Resource—oncentrators[1].ReadyToBreakSprite;
+                return resourceConcentratorBD.ResourceConcentrators[1].ReadyToBreakSprite;
             case ResourceTypes.GERMANIUM:
-                return resource—oncentratorBD.Resource—oncentrators[2].ReadyToBreakSprite;
+                return resourceConcentratorBD.ResourceConcentrators[2].ReadyToBreakSprite;
             case ResourceTypes.VANADIUM:
-                return resource—oncentratorBD.Resource—oncentrators[3].ReadyToBreakSprite;
+                return resourceConcentratorBD.ResourceConcentrators[3].ReadyToBreakSprite;
             case ResourceTypes.KRYPTON:
-                return resource—oncentratorBD.Resource—oncentrators[4].ReadyToBreakSprite;
+                return resourceConcentratorBD.ResourceConcentrators[4].ReadyToBreakSprite;
             default:
                 return null;
         }
